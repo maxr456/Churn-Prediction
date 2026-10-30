@@ -1,4 +1,11 @@
-# 👥 Customer Churn Prediction: End-to-End ML Pipeline & Deployment
+# Customer Churn Prediction: End-to-End ML Pipeline & Deployment
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://churn-prediction-95i4j7he3mtrzicna69ad5.streamlit.app/)
+
+> **Live Web Application (Deployed):** 
+> **[https://churn-prediction-95i4j7he3mtrzicna69ad5.streamlit.app/](https://churn-prediction-95i4j7he3mtrzicna69ad5.streamlit.app/)**
+
+---
 
 An end-to-end Machine Learning solution designed to predict customer churn risk, uncover behavioral churn drivers, and deliver retention insights.
 
@@ -6,8 +13,9 @@ This repository covers the complete lifecycle: from **Exploratory Data Analysis 
 
 ---
 
-## 📌 Executive Summary
+##  Executive Summary
 
+* **Live Demo**: Deployed to production at [Streamlit Community Cloud](https://churn-prediction-95i4j7he3mtrzicna69ad5.streamlit.app/).
 * **Business Problem**: Identify customers at risk of churning early enough to enable proactive retention interventions.
 * **Dataset**: 10,000 customer records with 32 engagement, financial, and support attributes.
 * **Core Challenge**: **Class Imbalance** (~10.2% churn rate vs. ~89.8% retention rate).
@@ -15,7 +23,7 @@ This repository covers the complete lifecycle: from **Exploratory Data Analysis 
 
 ---
 
-## 📊 Model Performance & Benchmarking
+##  Model Performance & Benchmarking
 
 In an imbalanced churn dataset, **Accuracy is a deceptive metric**—a naive model predicting "Retained" for every customer scores ~89.8% accuracy while detecting **0%** of churners. We benchmarked models using **Precision, Recall, F1-Score, and ROC-AUC**:
 
@@ -28,7 +36,7 @@ In an imbalanced churn dataset, **Accuracy is a deceptive metric**—a naive mod
 
 ---
 
-## 🔍 Key Churn Drivers (Feature Importance)
+##  Key Churn Drivers (Feature Importance)
 
 Analysis of the Random Forest feature importances reveals the top 4 operational drivers of churn:
 
@@ -39,7 +47,7 @@ Analysis of the Random Forest feature importances reveals the top 4 operational 
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```text
 ├── data/
@@ -58,9 +66,15 @@ Analysis of the Random Forest feature importances reveals the top 4 operational 
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
-### 1. Environment Setup
+### 1. Try the Live Web App (No Installation Needed)
+Access the live deployment directly in your browser:
+ **[https://churn-prediction-95i4j7he3mtrzicna69ad5.streamlit.app/](https://churn-prediction-95i4j7he3mtrzicna69ad5.streamlit.app/)**
+
+---
+
+### 2. Local Environment Setup
 
 Clone the repository and install dependencies in a virtual environment:
 
@@ -79,9 +93,7 @@ pip install -r requirements.txt
 
 ---
 
-### 2. Run the Interactive Web Dashboard (`Streamlit`)
-
-The Streamlit dashboard allows business users and stakeholders to simulate customer risk profiles with interactive sliders and receive immediate retention recommendations.
+### 3. Run the Web Dashboard Locally (`Streamlit`)
 
 ```bash
 streamlit run streamlit_app.py
@@ -91,7 +103,7 @@ streamlit run streamlit_app.py
 
 ---
 
-### 3. Run the Production REST API (`FastAPI`)
+### 4. Run the Production REST API (`FastAPI`)
 
 The FastAPI service exposes a low-latency endpoint for programmatic integration with web platforms, CRMs, or mobile backends.
 
@@ -127,7 +139,7 @@ uvicorn api:app --reload --port 8000
 
 ---
 
-### 4. Retrain Model from Scratch
+### 5. Retrain Model from Scratch
 
 To retrain the Random Forest model and update the serialized artifacts in `models/`:
 
